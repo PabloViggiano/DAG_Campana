@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - DGA Campana</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            background-color: #f4f7f6; 
+            color: #1f2937; 
+        }
+        .btn-arca {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-arca:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(45, 82, 149, 0.2);
+        }
+        .bg-arca-gradient {
+            background: linear-gradient(135deg, #2D5295 0%, #1E3A8A 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- HEADER CORPORATIVO -->
+    <header class="bg-[#2D5295] shadow-lg px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-20">
+        <div class="bg-white p-2 rounded shadow-sm flex items-center justify-center">
+            <svg viewBox="0 0 450 70" class="h-12 w-auto">
+                <text x="10" y="55" font-family="Arial" font-weight="bold" font-size="50" fill="#2D5295">ARCA</text>
+                <rect x="160" y="10" width="4" height="50" fill="#00ADEF" />
+                <text x="175" y="30" font-family="Arial" font-weight="bold" font-size="18" fill="#2D5295">OPERACIONES DGA CAMPANA</text>
+                <text x="175" y="55" font-family="Arial" font-weight="normal" font-size="14" fill="#666666">Dirección General de Aduanas</text>
+            </svg>
+        </div>
+        <div class="text-white text-xs font-bold tracking-widest uppercase opacity-80">
+            Sistema Centralizado de Análisis
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 flex items-center justify-center p-6">
+        <div class="max-w-5xl w-full">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Panel de Acceso Operativo</h1>
+                <p class="text-gray-500 max-w-2xl mx-auto">Seleccione el módulo de análisis territorial y operativo que desea visualizar. Cada entorno contiene datos específicos sobre centros de operaciones, distritos y zonas de acción.</p>
+            </div>
+
+            <!-- GRID DE ACCESO -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- BOTÓN OPERACIÓN 1 -->
+                <a href="DGA_Campana_Op1.html" class="btn-arca bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-2 bg-[#2D5295]"></div>
+                    <div class="p-8 flex-1 flex flex-col items-center text-center">
+                        <div class="bg-blue-50 p-4 rounded-full mb-6">
+                            <i data-lucide="layout-dashboard" class="h-10 w-10 text-[#2D5295]"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-800 mb-2">Operación 1</h2>
+                        <p class="text-sm text-gray-500 mb-6 flex-1">Visualización de infraestructura operativa primaria y centros de control aduanero.</p>
+                        <span class="inline-flex items-center gap-2 text-[#00ADEF] font-bold text-sm">
+                            Ingresar Módulo <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- BOTÓN OPERACIÓN 2 -->
+                <a href="DGA_Campana_Op2.html" class="btn-arca bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-2 bg-[#00ADEF]"></div>
+                    <div class="p-8 flex-1 flex flex-col items-center text-center">
+                        <div class="bg-cyan-50 p-4 rounded-full mb-6">
+                            <i data-lucide="map" class="h-10 w-10 text-[#00ADEF]"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-800 mb-2">Operación 2</h2>
+                        <p class="text-sm text-gray-500 mb-6 flex-1">Análisis territorial detallado de muelles, plantas y depósitos por jurisdicción.</p>
+                        <span class="inline-flex items-center gap-2 text-[#00ADEF] font-bold text-sm">
+                            Ingresar Módulo <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- BOTÓN OPERACIÓN 3 -->
+                <a href="DGA_Campana_Op3.html" class="btn-arca bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-2 bg-[#D946EF]"></div>
+                    <div class="p-8 flex-1 flex flex-col items-center text-center">
+                        <div class="bg-magenta-50 p-4 rounded-full mb-6" style="background-color: #fdf2ff;">
+                            <i data-lucide="database" class="h-10 w-10 text-[#D946EF]"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-800 mb-2">Operación 3</h2>
+                        <p class="text-sm text-gray-500 mb-6 flex-1">Reportes consolidados y estadísticas avanzadas de capacidad operativa.</p>
+                        <span class="inline-flex items-center gap-2 text-[#00ADEF] font-bold text-sm">
+                            Ingresar Módulo <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-200 py-6 text-center">
+        <div class="flex flex-col items-center gap-2">
+            <div class="flex items-center gap-4 mb-2">
+                <img src="https://www.afip.gob.ar/images/logo_afip.png" alt="AFIP" class="h-6 opacity-30 grayscale">
+                <div class="h-4 w-px bg-gray-300"></div>
+                <span class="text-xs font-bold text-gray-400 tracking-widest uppercase">Dirección General de Aduanas</span>
+            </div>
+            <p class="text-[10px] text-gray-400 font-bold tracking-widest uppercase">ARCA © 2026 | Operaciones DGA Campana</p>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
